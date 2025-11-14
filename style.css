@@ -2,34 +2,33 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 html, body {
     height: 100%;
 }
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f8f9fa;
-    color: #333;
+    color: #333333;
     display: flex;
     flex-direction: column;
 }
 
 header {
-    background: linear-gradient(135deg, #9b59b6, #2980b9);
+    background: linear-gradient(135deg, #4169E1, #8A2BE2);
     color: white;
     padding: 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    border-bottom: 5px solid #222222;
     position: relative;
-    border-bottom: 5px solid #ffffff;
 }
 
 .header-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     flex-grow: 1;
 }
 
@@ -41,17 +40,15 @@ header {
 .header-content h2 {
     font-size: 1.1rem;
     font-weight: 400;
-    margin-bottom: 10px;
 }
 
 #modo-oscuro-btn {
-    background-color: #34495e;
+    background-color: #8A2BE2;
     color: white;
     padding: 10px 20px;
-    border: none;
+    border: 1px solid #f8f9fa;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
     position: absolute;
     right: 20px;
     top: 50%;
@@ -59,7 +56,7 @@ header {
 }
 
 #modo-oscuro-btn:hover {
-    background-color: #2c3e50;
+    background-color: #6A1AAB;
 }
 
 main {
@@ -76,7 +73,7 @@ main {
     border-radius: 50%;
     object-fit: cover;
     margin-top: 20px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .menu {
@@ -92,26 +89,31 @@ main {
 }
 
 .menu a {
-    color: #2980b9;
+    color: #4169E1;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1rem;
     padding: 8px 15px;
     border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .menu a:hover {
-    background-color: #2980b9;
+    background-color: #4169E1;
     color: white;
 }
 
-.datos-personales {
-    margin-top: 30px;
-    font-size: 1.2rem;
-    text-align: left;
-    max-width: 700px;
+.datos-personales, .form-contacto {
     margin: 30px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    text-align: left;
+}
+
+.datos-personales {
+    max-width: 700px;
+    font-size: 1.2rem;
 }
 
 .datos-personales p {
@@ -119,36 +121,12 @@ main {
 }
 
 .datos-personales strong {
-    color: #2980b9;
-}
-
-footer {
-    background-color: #34495e;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    margin-top: 40px;
-    flex-shrink: 0;
-}
-
-footer button {
-    background-color: #9b59b6;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-footer button:hover {
-    background-color: #8e44ad;
+    color: #8A2BE2;
 }
 
 .form-contacto {
-    margin-top: 50px;
-    text-align: left;
     max-width: 600px;
+    margin-top: 50px;
 }
 
 .form-contacto label {
@@ -165,31 +143,126 @@ footer button:hover {
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1rem;
-    transition: border-color 0.3s ease;
 }
 
 .form-contacto input:focus,
 .form-contacto textarea:focus {
-    border-color: #9b59b6;
+    border-color: #8A2BE2;
 }
 
 .form-contacto button {
-    background-color: #9b59b6;
+    background-color: #8A2BE2;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 .form-contacto button:hover {
-    background-color: #8e44ad;
+    background-color: #6A1AAB;
 }
 
 .error {
     color: red;
     font-size: 0.9rem;
+}
+
+footer {
+    background-color: #222222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    flex-shrink: 0;
+    margin-top: 40px;
+}
+
+footer button {
+    background-color: #8A2BE2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+footer button:hover {
+    background-color: #6A1AAB;
+}
+
+.modo-oscuro {
+    background-color: #1A1A1A;
+    color: #E0E0E0;
+}
+
+.modo-oscuro header {
+    background: linear-gradient(135deg, #222222, #4169E1);
+    border-bottom: 5px solid #8A2BE2;
+}
+
+.modo-oscuro #modo-oscuro-btn {
+    background-color: #8A2BE2;
+    border-color: #8A2BE2;
+    color: white;
+}
+
+.modo-oscuro #modo-oscuro-btn:hover {
+    background-color: #6A1AAB;
+}
+
+.modo-oscuro .foto-personal {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.modo-oscuro .menu a {
+    color: #4169E1;
+}
+
+.modo-oscuro .menu a:hover {
+    background-color: #222222;
+    color: #8A2BE2;
+}
+
+.modo-oscuro .datos-personales, .modo-oscuro .form-contacto {
+    background-color: #222222;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.modo-oscuro .datos-personales strong {
+    color: #4169E1;
+}
+
+.modo-oscuro .form-contacto input,
+.modo-oscuro .form-contacto textarea {
+    background-color: #1A1A1A;
+    color: #E0E0E0;
+    border: 1px solid #4169E1;
+}
+
+.modo-oscuro .form-contacto input:focus,
+.modo-oscuro .form-contacto textarea:focus {
+    border-color: #8A2BE2;
+}
+
+.modo-oscuro .form-contacto button {
+    background-color: #8A2BE2;
+}
+
+.modo-oscuro .form-contacto button:hover {
+    background-color: #6A1AAB;
+}
+
+.modo-oscuro footer {
+    background-color: #1A1A1A;
+}
+
+.modo-oscuro footer button {
+    background-color: #4169E1;
+}
+
+.modo-oscuro footer button:hover {
+    background-color: #355CCF;
 }
 
 @media screen and (max-width: 768px) {
@@ -198,12 +271,14 @@ footer button:hover {
         text-align: center;
     }
 
-    .header-content h1 {
-        font-size: 2rem;
+    #modo-oscuro-btn {
+        position: static;
+        transform: translateY(0);
+        margin-top: 10px;
     }
 
-    .header-content h2 {
-        font-size: 1rem;
+    .header-content {
+        text-align: center;
     }
 
     .menu {
@@ -214,20 +289,14 @@ footer button:hover {
         margin: 10px 0;
     }
 
-    .foto-personal {
-        width: 120px;
-        height: 120px;
-    }
-
     .datos-personales {
         font-size: 1.1rem;
-        text-align: center;
-        padding: 0 20px;
+        padding: 20px;
     }
 
     .form-contacto {
         width: 100%;
-        padding: 0 20px;
+        padding: 20px;
     }
 }
 
@@ -242,18 +311,5 @@ footer button:hover {
 
     .menu a {
         font-size: 1rem;
-    }
-
-    .datos-personales {
-        font-size: 1rem;
-    }
-
-    .form-contacto input,
-    .form-contacto textarea {
-        font-size: 0.9rem;
-    }
-
-    .form-contacto button {
-        font-size: 0.9rem;
     }
 }
