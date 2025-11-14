@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Personal - Contacto</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div>
+                <h1>Ficha personal</h1>
+                <h2>Perfil de estudiante</h2>
+            </div>
+            <button id="modo-oscuro-btn">Modo Oscuro</button>
+        </div>
+    </header>
+
+
+    <main>
+        <img src="img/IMG_1538.jpg" alt="Foto del estudiante" class="foto-personal">
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://https://sfeas1.github.io/localcomercial/" target="_blank">Local Com</a></li>
+                <li><a href="https://sfeas1.github.io/fanpage_CSS/" target="_blank">Fan Page</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+
+        <section class="form-contacto">
+            <form id="contactoForm">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+                <span class="error" id="error-nombre"></span>
+
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <span class="error" id="error-email"></span>
+
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje"></textarea>
+                <span class="error" id="error-mensaje"></span>
+
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+
+    <footer>
+        <p>© 2025 Derechos reservados.</p>
+        <a href="" target="_blank"><button>Repositorio</button></a>
+    </footer>
+</body>
+
+</html>
