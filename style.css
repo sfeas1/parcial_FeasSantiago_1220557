@@ -70,7 +70,7 @@ main {
 .foto-personal {
     width: 150px;
     height: 150px;
-    border-radius: 50%;
+    border-radius: 7%;
     object-fit: cover;
     margin-top: 20px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
